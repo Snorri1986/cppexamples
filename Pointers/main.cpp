@@ -2,36 +2,47 @@
 
 using namespace std;
 
-void showMemoryAddress(int num,double doubleNum,string simpleString);
-void showValueTruePointer(int num,double doubleNum,string simpleString);
+class Chef {
+public:
+    void makeChicken() {
+        cout << "The chef makes chicken" << endl;
+    }
+
+    void makeSalad() {
+        cout << "The chef makes salad" << endl;
+    }
+
+    void makeSpecialDish() {
+        cout << "The chef makes bbq" << endl;
+    }
+
+    void makeSpecialDishesh() {
+        cout << "The chef makes bbq" << endl;
+    }
+
+};
+
+class ItalianChef : public Chef {
+public:
+    void makePasta() {
+        cout << "The chef makes pasta" << endl;
+    }
+
+      void makeSpecialDishesh() {
+        cout << "The chef makes Pizza" << endl;
+    }
+
+};
 
 int main()
 {
-    int num = 1000;
-    double pi = 3.14;
-    string simpleString = "Hello";
+    Chef chef;
+    chef.makeSpecialDishesh();
 
-    showMemoryAddress(num,pi,simpleString);
-    showValueTruePointer(num,pi,simpleString);
+    ItalianChef italianChef;
+    italianChef.makeSpecialDishesh();
 
     return 0;
 }
 
-void showMemoryAddress(int num,double doubleNum,string simpleString) {
 
-    cout<<"Integer value "<< num << " has an address " << &num << endl;
-    cout<<"Double value "<< doubleNum << " has an address " << &doubleNum << endl;
-    cout<<"String value "<< simpleString << " has an address " << &simpleString << endl;
-
-}
-
-void showValueTruePointer(int num,double doubleNum,string simpleString) {
-
-   int *pNum = &num;
-   double *pDoubleNum  = &doubleNum;
-   string *pSimpleString = &simpleString;
-
-   cout << "The value num has an address " << pNum << " and value " << *pNum << endl;
-   cout << "The value doubleNum has an address " << pDoubleNum << " and value " << *pDoubleNum << endl;
-   cout << "The value pSimpleString has an address " << pSimpleString << " and value " << *pSimpleString << endl;
-}

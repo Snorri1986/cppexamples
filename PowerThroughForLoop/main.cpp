@@ -2,24 +2,32 @@
 
 using namespace std;
 
-void showPower(int,int);
+class Employee {
 
-int main()
-{
-    int baseNumber;
-    int powerNumber;
-    cout << "Enter a baseNumber" << endl;
-    cin >> baseNumber;
-    cout << "Enter a powerNumber" << endl;
-    cin >> powerNumber;
-    showPower(baseNumber,powerNumber);
-    return 0;
-}
+public:
+    string name;
+    string company;
+    string age;
 
-void showPower(int base,int power) {
-    int result = 1;
-    for(int i = 0; i < power; i++) {
-        result = result * base;
-    }
-    cout << "The result is: " << result << endl;
+    Employee(string name, string company, string age) {
+        name = name;
+        company = company;
+        age = age;
+    };
+
+    Employee() {
+
+    };
+
+    void introduceYourself() {
+        cout << "Name - " << name << endl;
+        cout << "Company - " << company << endl;
+        cout << "Age - " << age << endl;
+    };
+
+ };
+
+
+int main() {
+    Employee employee1 = Employee("Denys","Youtube",26);
 }
