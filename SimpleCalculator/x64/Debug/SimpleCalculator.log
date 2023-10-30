@@ -1,0 +1,3 @@
+﻿  Calc.cpp
+D:\Applications\Cpp\cppexamples\SimpleCalculator\Calc.cpp(5,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  SimpleCalculator.vcxproj -> D:\Applications\Cpp\cppexamples\SimpleCalculator\x64\Debug\SimpleCalculator.exe
