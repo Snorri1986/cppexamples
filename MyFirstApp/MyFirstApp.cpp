@@ -10,6 +10,7 @@ int main()
     std::cout << "Human read message: " << char(int(c1)) << " " << char(int(c2)) << " " << char(int(c3)) 
         << " " << char(int(c4)) << " "
         << char(int(c5)) << std::endl;
+    system("cls");
     system("pause>0");
 }
 
