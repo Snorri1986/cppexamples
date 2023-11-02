@@ -1,0 +1,3 @@
+﻿  WhileLoop.cpp
+D:\Applications\Cpp\cppexamples\WhileLoop\WhileLoop.cpp(6,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  WhileLoop.vcxproj -> D:\Applications\Cpp\cppexamples\WhileLoop\x64\Debug\WhileLoop.exe
