@@ -19,9 +19,11 @@ class Date
         setYear(y);
     }
 
-            int getMonth();
-            int getDay();
-            int getYear();
+
+            int getDay() const;
+            int getMonth() const;
+            int getYear() const;
+
 
             void setMonth(int month);
             void setDay(int day);
