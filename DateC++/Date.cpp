@@ -14,9 +14,11 @@ corresponding members.*/
 #include <climits>
 #include <ctime>
 
+struct tm *ptr;
+
 void Date::setDay(int v_day)
 {
-    if (day > 0 && day <= 31)
+    if (v_day > 0 && v_day <= 31)
     {
         this->day = v_day;
     } else
@@ -27,7 +29,7 @@ void Date::setDay(int v_day)
 
 void Date::setMonth(int v_month)
 {
-    if (m > 0 && m <= 12)
+    if (v_month > 0 && v_month <= 12)
     {
         this->month = v_month;
     } else
@@ -38,7 +40,7 @@ void Date::setMonth(int v_month)
 
 void Date::setYear(int v_year)
 {
-    if (y > 0 && y <= INT_MAX)
+    if (v_year > 0 && v_year <= INT_MAX)
     {
         this->year = v_year;
     } else
@@ -63,8 +65,23 @@ int Date::getYear() const
 }
 
 // task related functions
+void Date::init(int m, int d, int y)
+{
+    setMonth(m);
+    setDay(d);
+    setYear(y);
+}
+
+void Date::init()
+{
+    time_t now = time(0);
+    ptr = localtime(&now);
+    setMonth(ptr->tm_mon + 1);
+    setDay(ptr->tm_mday);
+    setYear(ptr->tm_year + 1900);
+}
+
 void Date::print()
 {
-    struct tm *ptr;
-    time_t seconds;
+    std::cout << month << "-" << day << "-" << year << std::endl;
 }
